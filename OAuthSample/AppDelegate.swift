@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+
+        let consumerKey: String = ProcessInfo.processInfo.environment["TwitterConsumerKey"] ?? ""
+        let consumerSecretKey: String = ProcessInfo.processInfo.environment["TwitterConsumerSecretKey"] ?? ""
+        if !(consumerKey.isEmpty && consumerSecretKey.isEmpty) {
+            TWTRTwitter.sharedInstance().start(withConsumerKey: consumerKey, consumerSecret: consumerSecretKey)
+        } else {
+            print("Failed TwitterAPI authentication because of empty keys!")
+        }
         return true
     }
 
@@ -41,6 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
+    }
 
 }
 

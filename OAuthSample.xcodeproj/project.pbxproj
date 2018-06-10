@@ -12,9 +12,15 @@
 		BFF2E66620CBD8FE00C91D4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF2E66420CBD8FE00C91D4E /* Main.storyboard */; };
 		BFF2E66820CBD90000C91D4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF2E66720CBD90000C91D4E /* Assets.xcassets */; };
 		BFF2E66B20CBD90000C91D4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFF2E66920CBD90000C91D4E /* LaunchScreen.storyboard */; };
+		BFF2E67320CCCAF300C91D4E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFF2E67220CCCAF300C91D4E /* GoogleService-Info.plist */; };
+		BFF2E67620CCF36200C91D4E /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF2E67420CCED5700C91D4E /* SafariServices.framework */; };
+		D28E1DD8128D0D97EF7226CC /* Pods_OAuthSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B0DF5C44BF65280BA830C2 /* Pods_OAuthSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05B0DF5C44BF65280BA830C2 /* Pods_OAuthSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OAuthSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ACC7CD0D857CA520A438BBC /* Pods-OAuthSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuthSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OAuthSample/Pods-OAuthSample.debug.xcconfig"; sourceTree = "<group>"; };
+		7505DC9B699BFA69352F228F /* Pods-OAuthSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAuthSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-OAuthSample/Pods-OAuthSample.release.xcconfig"; sourceTree = "<group>"; };
 		BFF2E65D20CBD8FE00C91D4E /* OAuthSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAuthSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF2E66020CBD8FE00C91D4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFF2E66220CBD8FE00C91D4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,10 @@
 		BFF2E66720CBD90000C91D4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFF2E66A20CBD90000C91D4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFF2E66C20CBD90000C91D4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF2E67220CCCAF300C91D4E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BFF2E67420CCED5700C91D4E /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		BFF2E67C20CD10FF00C91D4E /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
+		BFF2E67D20CD112300C91D4E /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF2E67620CCF36200C91D4E /* SafariServices.framework in Frameworks */,
+				D28E1DD8128D0D97EF7226CC /* Pods_OAuthSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		721E43FF68E200EA280B49B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2ACC7CD0D857CA520A438BBC /* Pods-OAuthSample.debug.xcconfig */,
+				7505DC9B699BFA69352F228F /* Pods-OAuthSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC027034BC09BBFD25FE9EED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFF2E67420CCED5700C91D4E /* SafariServices.framework */,
+				05B0DF5C44BF65280BA830C2 /* Pods_OAuthSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BFF2E65420CBD8FE00C91D4E = {
 			isa = PBXGroup;
 			children = (
+				BFF2E67C20CD10FF00C91D4E /* debug.xcconfig */,
+				BFF2E67D20CD112300C91D4E /* release.xcconfig */,
 				BFF2E65F20CBD8FE00C91D4E /* OAuthSample */,
 				BFF2E65E20CBD8FE00C91D4E /* Products */,
+				721E43FF68E200EA280B49B9 /* Pods */,
+				BC027034BC09BBFD25FE9EED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +94,7 @@
 				BFF2E66720CBD90000C91D4E /* Assets.xcassets */,
 				BFF2E66920CBD90000C91D4E /* LaunchScreen.storyboard */,
 				BFF2E66C20CBD90000C91D4E /* Info.plist */,
+				BFF2E67220CCCAF300C91D4E /* GoogleService-Info.plist */,
 			);
 			path = OAuthSample;
 			sourceTree = "<group>";
@@ -71,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFF2E66F20CBD90000C91D4E /* Build configuration list for PBXNativeTarget "OAuthSample" */;
 			buildPhases = (
+				CD1E2BEA582110F75818C974 /* [CP] Check Pods Manifest.lock */,
 				BFF2E65920CBD8FE00C91D4E /* Sources */,
 				BFF2E65A20CBD8FE00C91D4E /* Frameworks */,
 				BFF2E65B20CBD8FE00C91D4E /* Resources */,
+				90035199991F38A86B773595 /* [CP] Embed Pods Frameworks */,
+				199824EFBAB770D01B4B548B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,12 +161,80 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF2E66B20CBD90000C91D4E /* LaunchScreen.storyboard in Resources */,
+				BFF2E67320CCCAF300C91D4E /* GoogleService-Info.plist in Resources */,
 				BFF2E66820CBD90000C91D4E /* Assets.xcassets in Resources */,
 				BFF2E66620CBD8FE00C91D4E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		199824EFBAB770D01B4B548B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OAuthSample/Pods-OAuthSample-resources.sh",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OAuthSample/Pods-OAuthSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90035199991F38A86B773595 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OAuthSample/Pods-OAuthSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OAuthSample/Pods-OAuthSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD1E2BEA582110F75818C974 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OAuthSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BFF2E65920CBD8FE00C91D4E /* Sources */ = {
@@ -218,6 +324,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)OAuthSample/OAuthSample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -271,6 +378,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)OAuthSample/OAuthSample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -278,17 +386,17 @@
 		};
 		BFF2E67020CBD90000C91D4E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF2E67C20CD10FF00C91D4E /* debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HYP4BUD3C6;
 				INFOPLIST_FILE = OAuthSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				INFOPLIST_PREPROCESS = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gates1de.OAuthSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -296,17 +404,17 @@
 		};
 		BFF2E67120CBD90000C91D4E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF2E67D20CD112300C91D4E /* release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HYP4BUD3C6;
 				INFOPLIST_FILE = OAuthSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				INFOPLIST_PREPROCESS = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gates1de.OAuthSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
