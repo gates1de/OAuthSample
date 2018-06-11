@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 import Firebase
 import TwitterKit
 
@@ -19,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
         let consumerKey: String = ProcessInfo.processInfo.environment["TwitterConsumerKey"] ?? ""
         let consumerSecretKey: String = ProcessInfo.processInfo.environment["TwitterConsumerSecretKey"] ?? ""
@@ -53,7 +56,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
+        if FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options) {
+            return true
+        }
+
+        if TWTRTwitter.sharedInstance().application(app, open: url, options: options) {
+            return true
+        }
+
+        return false
     }
 
 }

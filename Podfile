@@ -6,6 +6,7 @@ target 'OAuthSample' do
   use_frameworks!
 
   # Pods for OAuthSample
+  pod 'FBSDKLoginKit'
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
   pod 'TwitterKit'
